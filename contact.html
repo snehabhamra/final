@@ -25,28 +25,21 @@
             </ul>
         </div>
     </nav>
-    <section class="contact"><br><br>
-        <form action="/my-handling-form-page" method="post">
-            <h2 class="message">Send me a message</h2>
-            <ul>
-             <li>
-               <label for="name">Name:</label><br><br>
-               <input type="text" id="name" name="user_name"><br><br>
-             </li>
-             <li>
-               <label for="mail">E-mail:</label><br><br>
-               <input type="email" id="mail" name="user_email"><br><br>
-             </li>
-             <li>
-               <label for="msg">Message:</label><br><br>
-               <textarea id="msg" name="user_message"></textarea><br><b></b>
-             </li>
-            </ul><br>
-            <div class="input">
-                <input type="submit" name="" value="Send"><br><br>   
-            </div>
-           </form><br><br><br><br><br><br><br><br>
-    </section>
+
+    <div class="contactpage">
+        <div class="contactheading">
+            <h1>Send Me a Message</h1>
+        </div>
+        <div class="contact-form">
+            <form id="contact" method="POST" action="email.php">
+            <input name="name" type="text" class="form-control" placeholder="Your Name" required><br>
+            <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
+            <textarea name="message" class="form-control" placeholder="Type Your Message Here" row="4" required></textarea><br>
+            <input type="submit" class="form-control submit" value="SEND MESSAGE">
+        </form>
+        </div>
+    </div>
+
     <footer>
         <div class="bottomnav">
             <p id="bar"><strong>Designed by Sneha Bhamra, 2021 </strong></p>
