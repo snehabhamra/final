@@ -15,15 +15,18 @@ html {
 /*styling for homepage slogan*/
 #phrase {
     font-size: 35px;
-    font-family:Inconsolata, monospace ;
+    font-family: monospace ;
     font-style: normal;
     font-weight: 400;
     font-stretch: 100%;
+    text-transform: capitalize;
 }
+
 
 span {
     text-decoration: line-through;
     font-style: italic;
+    font-family: monospace;
 }
 
 /*added a contact page link as part of slogan - lets connect*/
@@ -33,9 +36,9 @@ span {
     margin-right: 10px;
     text-align: center;
     font-size: 35px;
-    font-family:Inconsolata,monospace ;
+    font-family: monospace ;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-stretch: 100%;
     unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0;
 }
@@ -74,16 +77,16 @@ span {
 body {
     margin: 0;
     padding: 0;
-
 }
+
 
 /*navbar styling*/
 .navbar {
-    display: flex;
+    display: flexbox;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0,0,0,.2);
-    color: black;
+    overflow: hidden;
 }
 
 .navbar-links ul {
@@ -101,7 +104,7 @@ body {
 }
 
 .navbar-links li a {
-    color: black;
+    color: #c7d5eb;
     text-decoration: none;
     padding: 1rem;
     display: block;
@@ -109,13 +112,15 @@ body {
     width: 18rem;
     max-width: 100%;
     text-align: center;
-    font-weight: 600;
+    font-weight: 400;
+    font-family: monospace;
+    
 }
 
 .navbar-links li:hover {
     background-color: #211b4385;
     transform: scale(1);
-    transition: all ease 2s;
+    transition: all ease 1s;
 }
 
 .toggle-button {
@@ -129,18 +134,13 @@ body {
     height:21px;
 } 
 
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
 
 /*mobile friendly syntax for navbar*/
 @media (max-width: 500px) {
     .toggle-button {
         display: flex;
     }
+
     .navbar-links {
         max-width: 100%;
     }
@@ -150,19 +150,34 @@ body {
     }
     
     .navbar-links li a {
-        padding: .5rem 1rem;
+        padding: .6rem 1rem;
         margin: 0rem;
         width: 100%;
+        font-size: 20px;
+        height: 50px;
+        z-index: 99;
+        color: #1f2b3f;
+
     }
+
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-        
+        max-height: 40px;
     }
     
     .navbar-links ul {
         width: 100%;
-        flex-direction: column;
+        position: fixed;
+        z-index: 999;
+        align-items: flex-start;
+        flex-direction: row;
+        top: 0%;
+        overflow: auto;
+        white-space: nowrap;
+        border-style:solid;
+        border-color: #c7d5eb;
+        background: #c7d5eb;
     }
     
     .header {
@@ -187,6 +202,7 @@ body {
     }
 }   
 
+
 /*footer style elements*/
 footer {
     background-color: rgba(0,0,0,.2);   
@@ -194,14 +210,17 @@ footer {
     width: 100%;
     text-align: left;
     font-family: inconsolata monospace;
-    font-size: 20px;
+    font-size: 15px;
     bottom: 0;
-    color: grey;
     justify-content:flex-end;
     bottom: 0;
     left: 5px;
 }
 
+footer strong {
+    font-weight: 500;
+    color: #c7d5eb;
+}
 /*styling for bottom right social icons*/
 
 img.icons {
@@ -327,12 +346,12 @@ img.icons {
     font-family: inconsolata monospace;
 }
 
+
 .container .history {
     font-weight: 300;
 }
 
 .container .competencies {
-    text-align: center;
     font-size: 20px;
     margin: 5px;
     background-color: rgba(0,0,0,.5);
@@ -341,11 +360,26 @@ img.icons {
     background-size: 100%;
     padding: 20px;
     border-style: dotted;
+    text-align: left;
+    align-content: center;
+    width: 100%;
 }
 
 .competencies_headings {
     font-size: 25px;
     font-weight: 600;
+    text-align: left;
+}
+
+@media (max-width: 500px) {
+    .container .competencies {
+        text-align: center;
+    }
+
+    .history {
+        margin-top: 5rem;
+        position: relative;
+    }
 }
 
 /*contact us page styling */
@@ -363,7 +397,7 @@ form {
     text-align: center;
     float:inline-start;
     flex-direction: column;
-    
+    border-width: 5px;
 }
 
 ul {
@@ -395,4 +429,10 @@ form li #msg {
     color: #c7d5eb;
     float: center; 
     max-width: 100%;
+}
+
+.competencies_headings ul  {
+    text-align: left;
+    float: left;
+    position: relative;
 }
