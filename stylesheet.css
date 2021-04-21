@@ -72,6 +72,7 @@ span {
 
 * {
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 body {
@@ -412,23 +413,56 @@ p {
 
 }
 
-/*contact us page styling */
+/*contact page styling start */
 .contactpage {
     display: flexbox;
     text-align: center;
-    margin: 0;
+    margin: auto;
+    display: inline-flexbox;
     padding: 0;
     background-color: white;
     margin-right: 300px;
     margin-left: 300px;
     margin-top: 100px;
     height: 100%;
+    max-width: 100%;
+    align-content: center;
     box-shadow:rgba(0,0,0,.5) 15px 25px;
 }
+ /*mobile-friendly syntax */
 
+@media (max-width: 800px) {
+    .contactpage {
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        display:flexbox;
+        align-content: center;
+        margin: 20px;
+        position: relative;
+    }
+    
+    .contactheading {
+        max-height: 100%;
+        height: 100%;
+        max-width: 100%;
+
+    }
+    .contact-form {
+        max-height: 100%;
+        height: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+    .contactheading h1 {
+        position: relative;
+        line-height: 30px;
+    }
+}
+
+/*pseudo hover element*/
 .contactpage:hover {
     transform:scale(1.05);
-
 }
 
 .contactheading {
@@ -439,12 +473,14 @@ p {
     font-size: 22px;
     line-height: 10px;
     color: black;
+    position: relative;
 }
 
 .contactheading h1 {
     background-color: white;
     padding-top: 30px;
     font-weight: 300;
+    position: relative;
 }
 
 .contact-form {
@@ -480,14 +516,17 @@ form .submit {
     font-weight: 500;
     letter-spacing: 2px;
     height: 50px;
+    max-width: 100%;
     margin-top: 20px;
     border-width: 1px;
 }
-
+ 
+/*hover element for button*/
 form .submit:hover {
-    background-color: #fff;
+    background-color: #c7d5eb;
     cursor:pointer;
+    box-shadow: rgba(0,0,0,.5) 5px 8px;
 }
 
-
+/*contact form syntax end*/
 
