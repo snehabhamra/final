@@ -178,6 +178,7 @@ body {
         border-style:solid;
         border-color: #c7d5eb;
         background: #c7d5eb;
+
     }
     
     .header {
@@ -221,18 +222,17 @@ footer strong {
     font-weight: 500;
     color: #c7d5eb;
 }
-/*styling for bottom right social icons*/
 
+/*styling for bottom right linkedin icon*/
 img.icons {
     bottom: 5px;
     right: 10px;
     position: absolute;
     height: 30px;
     width: 30px;
-
 }
 
-/*same as above*/
+/*styling for bottom right insta icon*/
 img.icons#insta {
     bottom: 5px;
     right: 45px;
@@ -241,20 +241,26 @@ img.icons#insta {
     width: 30px;
 }
 
-p {
-    font-family: iconsolate, monospace;
-    text-align: left;
-}
-
-
-
-img.icons {
+/*styling so footer social icons expand upon hover*/
+img.icons::before {
     bottom: 5px;
     right: 10px;
     position: absolute;
     height: 30px;
     width: 30px;
 }
+
+img.icons:hover {
+    transform: scale(1.5);
+}
+
+/*footer text styling*/
+p {
+    font-family: iconsolate, monospace;
+    text-align: left;
+    margin-left: 5px;
+}
+
 
 /*contact page syntax for webform styling*/
 
@@ -288,6 +294,7 @@ img.icons {
  .container .heading {
     font-weight: 300;
 }
+
 .container .row h1 {
     position: relative;
     flex-wrap: wrap;
@@ -322,8 +329,9 @@ img.icons {
 }
 /*profile image on about me page*/
 .me {
-    max-width: 50%;
-    height: 300px;
+    max-width: 100%;
+    width: 250px;
+    height: 320px;
     max-height: 100%;
     margin: 20px;
     padding: 5px;
@@ -359,10 +367,11 @@ img.icons {
     position: relative;
     background-size: 100%;
     padding: 20px;
-    border-style: dotted;
+    border-style:groove;
     text-align: left;
     align-content: center;
     width: 100%;
+    margin-left: 0%;
 }
 
 .competencies_headings {
