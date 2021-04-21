@@ -308,6 +308,12 @@ p {
     text-align: left;
     margin: 0%;
     margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
 .blogimages {
@@ -328,6 +334,7 @@ p {
     padding: 20px;
     text-align: center;
 }
+
 /*profile image on about me page*/
 .me {
     max-width: 100%;
