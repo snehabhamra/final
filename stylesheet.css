@@ -23,6 +23,7 @@ html {
 }
 
 
+
 span {
     text-decoration: line-through;
     font-style: italic;
@@ -277,6 +278,8 @@ p {
     text-align: center;
     flex-wrap: wrap;
     display: flexbox;
+    margin-left: 0%;
+    max-width: 100%;
     margin: 0%;
     color: #c7d5eb;
 }
@@ -287,9 +290,11 @@ p {
     flex-wrap: wrap;
     display: flexbox;
     flex-direction: row;
-    margin: 0%;
+    margin: 20px;
     width: 100%;
     font-family: monospace;
+    flex-grow: 2;
+
 }
 
  .container .heading {
@@ -308,9 +313,9 @@ p {
     text-align: left;
     margin: 0%;
     margin-left: 5px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    display: flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-content: stretch;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -322,6 +327,7 @@ p {
     padding: 5px;
     border: #c7d5eb;
     border-style:dotted;
+   
 }
 
 
@@ -356,18 +362,24 @@ p {
     font-weight: 500;
 }
 
-/* history page styling */
+/* competency page styling */
 
-.container h1 .history {
-    font-family: inconsolata monospace;
+.compcontainer h1 .history {
+    font-family:  monospace;
+    color: #c7d5eb;
 }
 
+.compcontainer {
+    font-family: monospace;
+}
 
-.container .history {
+.compcontainer .history {
     font-weight: 300;
+    color: #c7d5eb;
+    text-align: center;
 }
 
-.container .competencies {
+.compcontainer .competencies {
     font-size: 20px;
     margin: 5px;
     background-color: rgba(0,0,0,.5);
@@ -380,12 +392,16 @@ p {
     align-content: center;
     width: 100%;
     margin-left: 0%;
+    font-family: monospace;
+    color:#c7d5eb;
 }
 
-.competencies_headings {
+ .competencies_headings {
     font-size: 25px;
     font-weight: 600;
     text-align: left;
+    font-family: monospace;
+    color: #c7d5eb;
 }
 
 /*resumé styling within competencies page*/
@@ -454,6 +470,44 @@ p {
         height: 100%;
         max-width: 100%;
 
+    }
+    .contact-form {
+        max-height: 100%;
+        height: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+    .contactheading h1 {
+        position: relative;
+        line-height: 30px;
+    }
+}
+
+@media (min-height:1000px) {
+
+    .contactcontainer {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-top: 250px;
+    position: relative;
+    }
+    .contactpage {
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        display:flexbox;
+        align-content: center;
+        margin: 20px;
+        left: 350px;
+    }
+    
+    .contactheading {
+        max-height: 100%;
+        height: 100%;
+        max-width: 100%;
     }
     .contact-form {
         max-height: 100%;
